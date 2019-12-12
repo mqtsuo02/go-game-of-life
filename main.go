@@ -33,6 +33,7 @@ func main() {
 
 func initialize() {
 	fmt.Print(clear)
+	rand.Seed(time.Now().UnixNano())
 	for y := 1; y < height+1; y++ {
 		for x := 1; x < width+1; x++ {
 			cs[x][y] = rand.Intn(2)
