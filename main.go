@@ -25,7 +25,7 @@ func main() {
 	initialize()
 	for i := 0; i < lifespan; i++ {
 		render()
-		next()
+		update()
 		time.Sleep(100 * time.Millisecond)
 	}
 	end()
@@ -57,7 +57,7 @@ func render() {
 	fmt.Print(screen)
 }
 
-func next() {
+func update() {
 	for y := 1; y < height+1; y++ {
 		for x := 1; x < width+1; x++ {
 			ncs[x][y] = 0
